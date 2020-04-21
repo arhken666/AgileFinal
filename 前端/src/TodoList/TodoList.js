@@ -62,7 +62,48 @@ class TodoList extends Component {
   }
   // 父组件通过属性的形式向子组件传递参数
   // 子组件通过props接收父组件传递过来的参数
+  handleDelete = (index,id) => { // 删除
+    axios.delete('http://localhost:8181/event/delete/'+id, {
+    })
+    .then(function (response) {
+      if(response == "success") alert('删除成功')
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    console.log(index)
+    const list = [...this.state.list]
+    list.splice(index, 1)
+    this.setState({
+      list
+    })
+  }
 
+  handleIsEnd = (index,id) => { // isEnd
+    console.log(id)
+    axios.put('http://localhost:8181/event/update/'+id, {
+    })
+    .then(function (response) {
+      if(response == "success") alert('修改成功')
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    let list = [...this.state.list]
+    list = list.map((item,itemIndex) => {
+      if (itemIndex === index) {
+        console.log(item.name)
+        item.complete = item.complete === 1 ? 0 : 1
+        console.log(item)
+      }
+      return item
+    })
+    this.setState({
+      list
+    })
+  }
 
   render() {
       let EndNum = this.state.list.filter(item => item.complete === 1)
