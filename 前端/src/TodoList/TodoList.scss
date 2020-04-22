@@ -1,0 +1,25 @@
+.ContentBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .action{
+      display: flex;
+    }
+    .list{
+      text-align: left;
+      flex-direction: column;
+      background: #fff;
+      .content{
+        line-height: 30px;
+      }
+    }
+  }
+  .content{
+    .tag{
+      margin: 0 30px;
+    }
+    .button{
+      margin: 0 10px;
+    }
+  }
