@@ -8,16 +8,22 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bulma": "^0.8.1",
+    "enzyme-adapter-react-15": "^1.4.1",
     "enzyme-to-json": "^3.4.4",
     "node-sass": "^4.13.1",
+    "puppeteer": "^3.0.0",
+    "puppeteer-chromium-resolver": "^3.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "chai": "^4.2.0",
+    "lodash": "^4.17.15",
+    "mocha": "^7.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha test/bootstrap.js --recursive test --timeout 10000",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,6 +48,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^24.9.0",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
