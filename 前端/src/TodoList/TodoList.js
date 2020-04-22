@@ -104,7 +104,22 @@ class TodoList extends Component {
       list
     })
   }
-
+  getTodoItem() { // 获取子组件
+    return this.state.list.map((item, index) => {
+      return (
+        <TodoItem
+          deleteItem={this.handleDelete}
+          handleIsEnd={this.handleIsEnd}
+          key={index}
+          id = {item.id}
+          content={item.name}
+          isEnd={item.complete === 1? true:false}
+          index={index}
+        />
+      )
+    })
+  }
+  
   render() {
       let EndNum = this.state.list.filter(item => item.complete === 1)
       console.log(this.state.list)
