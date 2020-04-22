@@ -7,7 +7,7 @@ const globalVariables = _.pick(global, ['browser', 'expect']);
 const options = {
   headless: false,
   timeout: 10000,
-  executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+  executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'//找到chorme浏览器
 };
 
 // 启动浏览器
