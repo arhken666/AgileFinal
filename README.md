@@ -1,6 +1,20 @@
 # 敏捷web大作业
 
+Spring boot的依赖和前端的node_modules都因为过大没有推送上来，Jest测试放在了前端/src/ _ test _ 这里
 
+### 项目具体介绍
+
+* 后台使用Spring boot进行开发,数据库使用Mysql
+* 后台运用JPA+Spring Data进行数据库的操作，增删改查等功能，
+* 使用lombok减少java代码的冗长，使用**WebMvcConfigurerAdapter**解决跨域问题
+* 前端使用react进行开发，sass进行样式管理，使用bulma美化框架进行美化
+* 前端使用axios与后端进行数据交互
+* 测试部分，后台使用Junit5进行单元测试，前端主要使用Jest进行单元测试
+* e2e测试上，主要使用mocha和puppeteer和mocha进行测试
+
+### 效果图
+
+![avatar](todolist.gif)
 
 ***
 
